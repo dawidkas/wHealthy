@@ -8,7 +8,6 @@ import javax.validation.constraints.Size;
 import java.util.Set;
 
 @Entity
-@Table(name="meals")
 public class Meal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

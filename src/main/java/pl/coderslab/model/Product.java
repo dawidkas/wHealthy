@@ -16,16 +16,16 @@ public class Product {
     @Size(min = 2)
     private String name;
 
-    private int calories;
-    private int carbs;
-    private int sugar;
-    private int totalFat;
-    private int saturatedFat;
-    private int transFat;
-    private int protein;
-    private int fiber;
+    private double calories;
+    private double carbs;
+    private double sugar;
+    private double totalFat;
+    private double saturatedFat;
+    private double transFat;
+    private double protein;
+    private double fiber;
     private int barcodeNumber;
-    private int brand;
+    private String brand;
 
     public long getId() {
         return id;
@@ -43,67 +43,67 @@ public class Product {
         this.name = name;
     }
 
-    public int getCalories() {
+    public double getCalories() {
         return calories;
     }
 
-    public void setCalories(int calories) {
+    public void setCalories(double calories) {
         this.calories = calories;
     }
 
-    public int getCarbs() {
+    public double getCarbs() {
         return carbs;
     }
 
-    public void setCarbs(int carbs) {
+    public void setCarbs(double carbs) {
         this.carbs = carbs;
     }
 
-    public int getSugar() {
+    public double getSugar() {
         return sugar;
     }
 
-    public void setSugar(int sugar) {
+    public void setSugar(double sugar) {
         this.sugar = sugar;
     }
 
-    public int getTotalFat() {
+    public double getTotalFat() {
         return totalFat;
     }
 
-    public void setTotalFat(int totalFat) {
+    public void setTotalFat(double totalFat) {
         this.totalFat = totalFat;
     }
 
-    public int getSaturatedFat() {
+    public double getSaturatedFat() {
         return saturatedFat;
     }
 
-    public void setSaturatedFat(int saturatedFat) {
+    public void setSaturatedFat(double saturatedFat) {
         this.saturatedFat = saturatedFat;
     }
 
-    public int getTransFat() {
+    public double getTransFat() {
         return transFat;
     }
 
-    public void setTransFat(int transFat) {
+    public void setTransFat(double transFat) {
         this.transFat = transFat;
     }
 
-    public int getProtein() {
+    public double getProtein() {
         return protein;
     }
 
-    public void setProtein(int protein) {
+    public void setProtein(double protein) {
         this.protein = protein;
     }
 
-    public int getFiber() {
+    public double getFiber() {
         return fiber;
     }
 
-    public void setFiber(int fiber) {
+    public void setFiber(double fiber) {
         this.fiber = fiber;
     }
 
@@ -115,11 +115,11 @@ public class Product {
         this.barcodeNumber = barcodeNumber;
     }
 
-    public int getBrand() {
+    public String getBrand() {
         return brand;
     }
 
-    public void setBrand(int brand) {
+    public void setBrand(String brand) {
         this.brand = brand;
     }
 
