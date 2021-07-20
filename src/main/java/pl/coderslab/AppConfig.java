@@ -3,7 +3,6 @@ package pl.coderslab;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
@@ -27,7 +26,6 @@ import java.util.Locale;
 @ComponentScan(basePackages = "pl.coderslab")
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "pl.coderslab.repository")
-@EnableAspectJAutoProxy
 public class AppConfig implements WebMvcConfigurer {
 
     @Override
@@ -38,7 +36,7 @@ public class AppConfig implements WebMvcConfigurer {
     @Bean
     public LocalEntityManagerFactoryBean entityManagerFactory() {
         LocalEntityManagerFactoryBean emfb = new LocalEntityManagerFactoryBean();
-        emfb.setPersistenceUnitName("wHealthyPersistenceUnit");
+        emfb.setPersistenceUnitName("whealthydb");
         return emfb;
     }
 
