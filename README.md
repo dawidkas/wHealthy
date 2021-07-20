@@ -1,3 +1,16 @@
-wHealthy
+# wHealthy
 
-wHealthy to aplikacja umożliwiająca szybki i prosty sposób sprawdzenia wartości odżywczych półproduktów, gotowych produktów czy całych posiłków, dodatkowo z możliwością zapisywania w dzienniku informacji dot. ilości spożytych makroelementów z przejrzystym podziałem na dni, tygodnie oraz miesiące.
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+
+## General info
+This Maven project is a simple way to check your ingredients' or whole meals' nutritional value. Since it's a new idea, more and more functionalities will be added over time.
+
+## Technologies
+This project is using the following:
+* Java version: 14
+* MySQL version: 5.7
+* Spring/Springboot
+* Hibernate
+* Bootstrap library (SB Admin^2 theme)
