@@ -1,15 +1,19 @@
-package pl.coderslab.entity;
+package pl.coderslab.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
+
+    @NotBlank
+    @NotEmpty
+    @Size(min = 2)
     private String name;
 
     private int calories;
@@ -23,11 +27,11 @@ public class Product {
     private int barcodeNumber;
     private int brand;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

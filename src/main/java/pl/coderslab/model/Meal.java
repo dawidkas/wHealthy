@@ -1,23 +1,32 @@
-package pl.coderslab.entity;
+package pl.coderslab.model;
+
 
 import javax.persistence.*;
-import java.util.List;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+import java.util.Set;
 
 @Entity
-public class Recipe {
+@Table(name="meals")
+public class Meal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
+
+    @NotBlank
+    @NotEmpty
+    @Size(min = 2)
     private String name;
 
     @OneToMany
-    List<Product> products;
+    Set<Product> products;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -29,17 +38,17 @@ public class Recipe {
         this.name = name;
     }
 
-    public List<Product> getProducts() {
+    public Set<Product> getProducts() {
         return products;
     }
 
-    public void setProducts(List<Product> products) {
+    public void setProducts(Set<Product> products) {
         this.products = products;
     }
 
     @Override
     public String toString() {
-        return "Recipe{" +
+        return "Meal{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", products=" + products +
