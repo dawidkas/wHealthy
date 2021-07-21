@@ -24,7 +24,7 @@ public class Product {
     private double transFat;
     private double protein;
     private double fiber;
-    private int barcodeNumber;
+//    private int barcodeNumber;
     private String brand;
 
     public long getId() {
@@ -107,13 +107,13 @@ public class Product {
         this.fiber = fiber;
     }
 
-    public int getBarcodeNumber() {
-        return barcodeNumber;
-    }
-
-    public void setBarcodeNumber(int barcodeNumber) {
-        this.barcodeNumber = barcodeNumber;
-    }
+//    public int getBarcodeNumber() {
+//        return barcodeNumber;
+//    }
+//
+//    public void setBarcodeNumber(int barcodeNumber) {
+//        this.barcodeNumber = barcodeNumber;
+//    }
 
     public String getBrand() {
         return brand;
@@ -136,7 +136,7 @@ public class Product {
                 ", transFat=" + transFat +
                 ", protein=" + protein +
                 ", fiber=" + fiber +
-                ", barcodeNumber=" + barcodeNumber +
+//                ", barcodeNumber=" + barcodeNumber +
                 ", brand=" + brand +
                 '}';
     }
