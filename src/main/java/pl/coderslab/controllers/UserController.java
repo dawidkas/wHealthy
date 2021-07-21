@@ -1,37 +1,39 @@
 package pl.coderslab.controllers;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import pl.coderslab.model.User;
 import pl.coderslab.service.UserService;
 
-import javax.validation.Valid;
-
 @Controller
 public class UserController {
-//    private final UserService service;
-//
-//
-//    public UserController(UserService service) {
-//        this.service = service;
-//    }
-//
-//    @GetMapping("/register")
-//    public String registration(User user) {
-//        return "user/registration";
-//    }
-//
-//    @PostMapping("/register")
-//    public String registerPost(@Valid User user, BindingResult result, @RequestParam String password, @RequestParam String repassword) {
-//        if (password.equals(repassword) && !result.hasErrors()) {
-//            service.saveUser(user);
-//            return "user/login";
-//        } else {
-//            return "user/registration";
-//        }
-//    }
 
+    private final UserService userService;
+
+    @Autowired
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
+
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
+    public String showRegistration(User user) {
+        return "user/registration";
+    }
+
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    public String register(User user, BindingResult result) {
+        if (result.hasErrors()) {
+            return "user/registration";
+        }
+        userService.save(user);
+        return "user/login";
+    }
+
+    @GetMapping("/login")
+    public String showLogin(User user) {
+        return "user/login";
+    }
 }

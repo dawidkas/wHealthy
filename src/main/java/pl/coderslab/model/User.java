@@ -8,6 +8,7 @@ import javax.validation.constraints.Email;
 import java.util.Set;
 
 @Entity
+@Table(name = "user")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,22 +27,22 @@ public class User {
     @Size(min = 2)
     private String password;
 
-    @OneToOne
-    private UserDetail userDetail;
+//    @OneToOne
+//    private UserDetail userDetail;
 
     @OneToMany
     private Set<Product> products;
 
-    @OneToMany
-    private Set<Recipe> recipes;
-
-    public User() {
-    }
+//    @OneToMany
+//    private Set<Recipe> recipes;
 
     public User(String username, String email, String password) {
         this.username = username;
         this.email = email;
         this.password = password;
+    }
+
+    public User() {
     }
 
     public long getId() {
@@ -76,13 +77,13 @@ public class User {
         this.password = password;
     }
 
-    public UserDetail getUserDetails() {
-        return userDetail;
-    }
+//    public UserDetail getUserDetails() {
+//        return userDetail;
+//    }
 
-    public void setUserDetails(UserDetail userDetail) {
-        this.userDetail = userDetail;
-    }
+//    public void setUserDetails(UserDetail userDetail) {
+//        this.userDetail = userDetail;
+//    }
 
     public Set<Product> getProducts() {
         return products;
@@ -92,13 +93,14 @@ public class User {
         this.products = products;
     }
 
-    public Set<Recipe> getRecipes() {
-        return recipes;
-    }
+//    public Set<Recipe> getRecipes() {
+//        return recipes;
+//    }
 
-    public void setRecipes(Set<Recipe> recipes) {
-        this.recipes = recipes;
-    }
+//    public void setRecipes(Set<Recipe> recipes) {
+//        this.recipes = recipes;
+//    }
+
 
     @Override
     public String toString() {
