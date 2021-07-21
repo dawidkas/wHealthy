@@ -8,6 +8,5 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HomeController {
 
     @GetMapping("/about")
-    @ResponseBody
-    public String about() { return "Here you can find some details for logged users"; }
+    public String about() { return "about"; }
 }
