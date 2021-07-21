@@ -4,9 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import pl.coderslab.model.Product;
 import pl.coderslab.service.ProductService;
 
@@ -42,10 +40,15 @@ public class ProductController {
         return "/product/productList";
     }
 
+    @GetMapping(value = "product/search")
+    public String getProductByName(Product product) {
+        return "product/searchProduct";
+    }
 
-//    @GetMapping(value = "product/search")
-//    public String getsearchProductByName(Product product) {
-//        productService.findProductByName(product.getName());
-//        return "product/searchProduct";
-//    }
+    @PostMapping(value = "product/search")
+    public String searchProductByName(Model model, @ModelAttribute("name") String name) {
+        Product product = productService.findProductByName(name);
+        model.addAttribute("product", product);
+        return "/product/searchProduct";
+    }
 }
