@@ -80,8 +80,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
-
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
             <div class="sidebar-brand-text mx-3"><img src="/theme/img/wHealthy.png"></div>
         </a>
 
@@ -90,7 +89,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="/">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Strona główna</span></a>
         </li>
@@ -130,12 +129,12 @@
                 <span>Kalkulator wartości odżywczych</span></a>
         </li>
 
-        <%--    <!-- Nav Item - Tables -->--%>
-        <%--    <li class="nav-item">--%>
-        <%--      <a class="nav-link" href="tables.html">--%>
-        <%--        <i class="fas fa-fw fa-table"></i>--%>
-        <%--        <span>Tables</span></a>--%>
-        <%--    </li>--%>
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+              <a class="nav-link" href="/about">
+                <i class="fas fa-fw fa-table"></i>
+                <span>O wHealthy</span></a>
+            </li>
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
