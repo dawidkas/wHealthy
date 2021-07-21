@@ -95,46 +95,54 @@
         </li>
 
         <!-- Divider -->
-
-
         <hr class="sidebar-divider">
 
-        <!-- Heading -->
-
-
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-               aria-expanded="false" aria-controls="collapsePages">
-                <i class="fas fa-fw fa-folder"></i>
-                <span>Login</span>
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Logowanie</span>
             </a>
-            <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar"
-                 style="">
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Opcje logowania</h6>
-                    <a class="collapse-item" href="/login">Logowanie</a>
-                    <a class="collapse-item" href="/register">Rejestracja</a>
-
+                    <a class="collapse-item" href="http://localhost:8080/login">Logowanie</a>
+                    <a class="collapse-item" href="http://localhost:8080/register">Rejestracja</a>
                     <div class="collapse-divider"></div>
-
-
                 </div>
             </div>
         </li>
 
-        <!-- Nav Item - Charts -->
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Nav Item - Wartości odżywcze -->
         <li class="nav-item">
-            <a class="nav-link" href="charts.html">
+            <a class="nav-link" href="http://localhost:8080/product/search">
                 <i class="fas fa-fw fa-chart-area"></i>
-                <span>Kalkulator wartości odżywczych</span></a>
+                <span>Wyszukaj produkt</span></a>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link" href="http://localhost:8080/product/list">
+                <i class="fas fa-fw fa-chart-area"></i>
+                <span>Lista produktów</span></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="http://localhost:8080/product/add">
+                <i class="fas fa-fw fa-chart-area"></i>
+                <span>Dodaj nowy produkt</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
-              <a class="nav-link" href="/about">
+        <li class="nav-item">
+            <a class="nav-link" href="http://localhost:8080/about">
                 <i class="fas fa-fw fa-table"></i>
                 <span>O wHealthy</span></a>
-            </li>
+        </li>
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
