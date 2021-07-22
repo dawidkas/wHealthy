@@ -18,7 +18,7 @@
             <h6 class="m-0 font-weight-bold text-primary">Dodawanie produktu do bazy danych</h6>
             </center>
         </div>
-        <div class="card-body>
+        <div class="card-body">
             <%--@elvariable id="product" type="pl.coderslab.model.Product"--%>
             <form:form action="add" method="post" modelAttribute="product">
                 <div class="col-sm-6">
@@ -70,8 +70,5 @@
                 <hr>
             </form:form>
         </div>
-    </div>
-
-</div>
 
 <jsp:include page="/WEB-INF/footer.jsp"/>
