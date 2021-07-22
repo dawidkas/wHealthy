@@ -134,6 +134,12 @@
                 <span>Dodaj nowy produkt</span></a>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link" href="http://localhost:8080/product/calculator">
+                <i class="fas fa-fw fa-chart-area"></i>
+                <span>Kalkulator wartości odżywczych</span></a>
+        </li>
+
         <!-- Divider -->
         <hr class="sidebar-divider">
 
