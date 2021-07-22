@@ -66,7 +66,7 @@
 <%--                                placeholder="Kod kreskowy"/>--%>
 <%--                </div>--%>
                 <div><p>   </p></div>
-                <input type="submit" class="btn btn-success btn-icon-split" value=" Dodaj ">
+                <input type="submit" class="btn btn-success" value=" Dodaj ">
                 <hr>
             </form:form>
         </div>
