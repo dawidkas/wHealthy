@@ -14,9 +14,11 @@
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
+            <center>
             <h6 class="m-0 font-weight-bold text-primary">Dodawanie produktu do bazy danych</h6>
+            </center>
         </div>
-        <div class="card-body">
+        <div class="card-body>
             <%--@elvariable id="product" type="pl.coderslab.model.Product"--%>
             <form:form action="add" method="post" modelAttribute="product">
                 <div class="col-sm-6">
