@@ -23,7 +23,7 @@
     <form:form method="post" modelAttribute="product">
         <div id="search">
             <div>
-                <form:input path="name" type="text" name="searchString" />
+                <form:input path="name" type="text" name="searchString"/>
                 <input type="submit" value=" Wyszukaj " />
             </div>
         </div>

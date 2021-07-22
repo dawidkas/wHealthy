@@ -9,11 +9,11 @@ import java.util.List;
 
 @Service
 @Primary
-public class JpaUserService implements UserService {
+public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
 
-    public JpaUserService(UserRepository userRepository) {
+    public UserServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 

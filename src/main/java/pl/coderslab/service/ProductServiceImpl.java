@@ -9,11 +9,11 @@ import java.util.List;
 
 @Service
 @Primary
-public class JpaProductService implements ProductService {
+public class ProductServiceImpl implements ProductService {
 
     private final ProductRepository productRepository;
 
-    public JpaProductService(ProductRepository productRepository) {
+    public ProductServiceImpl(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
 

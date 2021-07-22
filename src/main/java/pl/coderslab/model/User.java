@@ -30,9 +30,6 @@ public class User {
 //    @OneToOne
 //    private UserDetail userDetail;
 
-    @OneToMany
-    private Set<Product> products;
-
 //    @OneToMany
 //    private Set<Recipe> recipes;
 
@@ -84,14 +81,6 @@ public class User {
 //    public void setUserDetails(UserDetail userDetail) {
 //        this.userDetail = userDetail;
 //    }
-
-    public Set<Product> getProducts() {
-        return products;
-    }
-
-    public void setProducts(Set<Product> products) {
-        this.products = products;
-    }
 
 //    public Set<Recipe> getRecipes() {
 //        return recipes;

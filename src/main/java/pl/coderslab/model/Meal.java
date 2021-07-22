@@ -19,7 +19,7 @@ public class Meal {
     private String name;
 
     @OneToMany
-    Set<Product> products;
+    Set<ProductWithWeight> productsWithWeight;
 
     public long getId() {
         return id;
@@ -37,12 +37,12 @@ public class Meal {
         this.name = name;
     }
 
-    public Set<Product> getProducts() {
-        return products;
+    public Set<ProductWithWeight> getProductsWithWeight() {
+        return productsWithWeight;
     }
 
-    public void setProducts(Set<Product> products) {
-        this.products = products;
+    public void setProductsWithWeight(Set<ProductWithWeight> productsWithWeight) {
+        this.productsWithWeight = productsWithWeight;
     }
 
     @Override
@@ -50,7 +50,7 @@ public class Meal {
         return "Meal{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", products=" + products +
+                ", productsWithWeight=" + productsWithWeight +
                 '}';
     }
 }
