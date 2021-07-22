@@ -30,6 +30,7 @@
     </form:form>
     <hr>
     <c:if test="${not empty product.name}">
+        <p>Wartości spożywcze w 100g produktu</p>
     <table class="table" border="1">
         <thead>
         <tr>

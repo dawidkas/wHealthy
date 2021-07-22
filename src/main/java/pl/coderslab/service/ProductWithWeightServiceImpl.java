@@ -2,8 +2,8 @@ package pl.coderslab.service;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
-import pl.coderslab.model.Product;
 import pl.coderslab.model.ProductWithWeight;
+import pl.coderslab.repository.ProductRepository;
 import pl.coderslab.repository.ProductWithWeightRepository;
 
 import java.util.List;
@@ -13,9 +13,11 @@ import java.util.List;
 public class ProductWithWeightServiceImpl implements ProductWithWeightService {
 
     private final ProductWithWeightRepository productWithWeightRepository;
+    private final ProductRepository productRepository;
 
-    public ProductWithWeightServiceImpl(ProductWithWeightRepository productWithWeightRepository) {
+    public ProductWithWeightServiceImpl(ProductWithWeightRepository productWithWeightRepository, ProductRepository productRepository) {
         this.productWithWeightRepository = productWithWeightRepository;
+        this.productRepository = productRepository;
     }
 
     @Override
@@ -30,14 +32,6 @@ public class ProductWithWeightServiceImpl implements ProductWithWeightService {
 
     @Override
     public void add(ProductWithWeight productWithWeight) {
-    }
-
-    @Override
-    public void setWeight(Product product, double weight) {
-        ProductWithWeight productWithWeight = new ProductWithWeight();
-        productWithWeight.setProduct(product);
-        productWithWeight.setWeight(weight);
-        productWithWeightRepository.save(productWithWeight);
     }
 
     @Override

@@ -27,6 +27,9 @@ public class Product {
 //    private int barcodeNumber;
     private String brand;
 
+//    @OneToOne
+//    private ProductWithWeight productWithWeight;
+
     public long getId() {
         return id;
     }
@@ -122,6 +125,14 @@ public class Product {
     public void setBrand(String brand) {
         this.brand = brand;
     }
+
+//    public ProductWithWeight getProductWithWeight() {
+//        return productWithWeight;
+//    }
+//
+//    public void setProductWithWeight(ProductWithWeight productWithWeight) {
+//        this.productWithWeight = productWithWeight;
+//    }
 
     @Override
     public String toString() {

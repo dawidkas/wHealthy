@@ -8,4 +8,5 @@ public interface ProductWithWeightRepository extends JpaRepository<ProductWithWe
 
     @Query("SELECT pww FROM Product pww WHERE pww.id =?1")
     ProductWithWeight findProductWithWeightById(long id);
+
 }

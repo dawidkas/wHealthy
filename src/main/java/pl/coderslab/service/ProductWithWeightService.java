@@ -10,9 +10,5 @@ public interface ProductWithWeightService {
     ProductWithWeight findById(long id);
     List<ProductWithWeight> findAll();
     void add(ProductWithWeight productWithWeight);
-
-    void setWeight(Product product, double weight);
-
     void delete(long id);
-
 }
