@@ -1,6 +1,7 @@
 package pl.coderslab.service;
 
 import org.springframework.context.annotation.Primary;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 import pl.coderslab.model.User;
 import pl.coderslab.repository.UserRepository;
@@ -29,6 +30,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void save(User user) {
+        user.setPassword(BCrypt.hashpw(user.getPassword(), BCrypt.gensalt()));
         userRepository.save(user);
     }
 

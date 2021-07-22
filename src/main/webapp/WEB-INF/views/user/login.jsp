@@ -49,10 +49,10 @@
                                 </div>
                                 <form class="user">
                                     <div class="form-group">
-                                        <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Wprowadź swój login">
+                                        <input type="text" class="form-control form-control-user" placeholder="Wprowadź swój login">
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Wprowadź swoje hasło">
+                                        <input type="password" class="form-control form-control-user" placeholder="Wprowadź swoje hasło">
                                     </div>
                                     <div class="form-group">
 
