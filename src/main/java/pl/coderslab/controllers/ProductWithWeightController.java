@@ -1,5 +1,6 @@
 package pl.coderslab.controllers;
 
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,15 +21,30 @@ public class ProductWithWeightController {
         this.productService = productService;
     }
 
-    @GetMapping(value = "/product/calculator")
+    @GetMapping(value = "/calculator")
     public String showCalculator(Product product) {
-        return "product/calculator";
+        return "calculator/start";
     }
 
-    @PostMapping(value = "/product/calculator")
-    public String searchProductByName(Model model, @RequestParam(required = false) String name) {
-            Product product = productService.findProductByName(name);
+    @PostMapping(value = "/calculator")
+    public String searchProductByName(Model model, @ModelAttribute("name") String name) {
+        Product product = productService.findProductByName(name);
+        model.addAttribute("product", product);
+        return "calculator/start";
+    }
+
+    @PostMapping(value = "/calculator/{id}")
+    public String searchProductByName(Model model, @PathVariable long id) {
+            Product product = productService.findProductById(id);
             model.addAttribute("product", product);
-        return "/product/calculator";
+        return "calculator/calc";
+    }
+
+    @GetMapping(value = "/calculator/{id}")
+    public String calculate(Model model, @PathVariable long id, @RequestParam(required = false) Double weight) {
+        Product product = productService.findProductById(id);
+        model.addAttribute("product", product);
+        model.addAttribute("weight", weight);
+        return "calculator/calc";
     }
 }
