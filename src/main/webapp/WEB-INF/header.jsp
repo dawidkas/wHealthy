@@ -135,7 +135,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="http://localhost:8080/product/calculator">
+            <a class="nav-link" href="http://localhost:8080/calculator">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Kalkulator wartości odżywczych</span></a>
         </li>
